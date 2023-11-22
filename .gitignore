@@ -60,3 +60,61 @@
 /drush
 /drupal.phar
 /drupal
+
+# Node dependencies
+/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Editor and system files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Backup files
+*~
+*.bak
+
+# Compiled front-end assets
+/css/*.css
+/js/*.js
+
+# Testing artifacts
+/coverage/
+/phpunit.xml
+
+# Laravel-specific ignores
+/laravel/vendor/
+/laravel/node_modules/
+/laravel/public/storage/
+/laravel/.env
+/laravel/.env.backup
+/laravel/Homestead.json
+/laravel/Homestead.yaml
+/laravel/npm-debug.log
+/laravel/yarn-error.log
+/laravel/storage/*.key
+
+# Compiled front-end assets in Laravel
+/laravel/public/css/*.css
+/laravel/public/js/*.js
+
+# Laravel editor config and system files
+/laravel/.vscode/
+/laravel/.idea/
+/laravel/*.swp
+/laravel/*.swo
+/laravel/.DS_Store
+
+# Laravel backup files
+/laravel/*~
+/laravel/*.bak
+
+# Laravel Testing artifacts
+/laravel/coverage/
+/laravel/phpunit.xml
