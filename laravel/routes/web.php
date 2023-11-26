@@ -21,6 +21,18 @@ Route::get('password/reset/{token}', [ResetPasswordController::class, 'showReset
 Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 
 
+Route::get('/translations/edit', function () {
+    return view('edit_translations');
+})->name('translations.edit');
+
+Route::post('/translations/update', 'TranslationController@update')->name('translations.update');
+
+Route::get('/admin', 'AdminController@index')->name('admin.index');
+
+use App\Http\Controllers\AdminController;
+
+Route::get('/admin', [AdminController::class, 'index']);
+
 
 
 /*
