@@ -13,12 +13,6 @@
     <!-- Include the Quill library -->
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
-    <style>
-        p {
-            max-width: 70ch;
-        }
-
-    </style>
 </head>
 <body class="bg-light">
 
