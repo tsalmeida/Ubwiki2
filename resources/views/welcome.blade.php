@@ -2,17 +2,7 @@
 
 @section('content')
 
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <div class="flex-grow-1"></div> <!-- This div will create the space -->
-                <a class="navbar-item link-success" href="#" data-bs-toggle="modal" data-bs-target="#languageModal"><i
-                        class='fad fa-language fa-fw fa-2x'></i></a>
-                <a class="navbar-item link-primary" href="#" data-bs-toggle="modal" data-bs-target="#accountModal"><i
-                        class='fad fa-user-circle fa-fw fa-2x'></i></a>
-            </div>
-        </nav>
-    </div>
+
     <div class="container">
         <x-white-board>
             <h1>{{ __('messages.welcome_to') }}</h1>
