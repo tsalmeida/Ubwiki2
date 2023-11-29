@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('ubwiki.welcome');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('ubwiki.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/delfos', function () {
-    return view('delfos');
+    return view('delfos.delfos');
 });
 
 require __DIR__.'/auth.php';

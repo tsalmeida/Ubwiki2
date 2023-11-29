@@ -2,7 +2,6 @@
 
 @section('content')
 
-
     <div class="container">
         <x-white-board>
             <h1>{{ __('messages.welcome_to') }}</h1>
@@ -12,10 +11,6 @@
             <p>{{ __('messages.courses_description') }}</p>
             <p>{{ __('messages.notes_feature') }}</p>
             <p>{{ __('messages.encouragement') }}</p>
-
-            {{--            <div id="editor">--}}
-            {{--                <!-- This is where the editor will appear -->--}}
-            {{--            </div>--}}
 
         </x-white-board>
 
