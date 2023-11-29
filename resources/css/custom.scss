@@ -14,7 +14,8 @@ $font-family-monospace: 'Roboto Mono', SFMono-Regular, Menlo, Monaco, Consolas, 
 
 $black: #131618;
 
-@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+//@import '../../node_modules/bootstrap/scss/bootstrap';
 
 .font-half-condensed-bold {
     font-family: 'Roboto Condensed', 'Oswald', 'Lato', sans-serif;
