@@ -32,5 +32,4 @@ Route::get('/delfos', function () {
     return view('delfos');
 });
 
-
 require __DIR__.'/auth.php';
