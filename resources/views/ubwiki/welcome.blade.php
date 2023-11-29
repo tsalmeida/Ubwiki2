@@ -2,6 +2,8 @@
 
 @section('content')
 
+    <x-navbar_language_login />
+
     <div class="container">
         <x-white-board>
             <h1>{{ __('messages.welcome_to') }}</h1>
@@ -76,9 +78,3 @@
 @endsection
 
 
-<!-- Include Bootstrap JS and its dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>

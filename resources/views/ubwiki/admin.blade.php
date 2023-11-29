@@ -1,4 +1,3 @@
-{{-- Correct usage --}}
 @extends('layout')
 
 @section('content')

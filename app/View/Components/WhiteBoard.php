@@ -8,13 +8,13 @@ use Illuminate\View\Component;
 
 class WhiteBoard extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+    public $classes;
+
+    public function __construct($classes = '')
     {
-        //
+        $this->classes = $classes;
     }
+
 
     /**
      * Get the view / contents that represent the component.
