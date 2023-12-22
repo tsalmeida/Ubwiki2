@@ -19,6 +19,9 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
 # Copy your application files to the container
 COPY . /var/www/html
 
+# Install Composer dependencies
+RUN composer install --no-dev --optimize-autoloader
+
 # Set Apache DocumentRoot to Laravel public directory
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 
@@ -33,3 +36,4 @@ EXPOSE 80
 
 # Start Apache
 CMD ["apache2-foreground"]
+
