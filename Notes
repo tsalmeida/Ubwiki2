@@ -1,0 +1,11 @@
+To get a new environment working:
+
+Install Docker
+Clone with Github
+Set-up Docker with the following commands:
+
+docker build -t ubwiki2 .
+docker run -d -p 8000:80 ubwiki2
+
+
+

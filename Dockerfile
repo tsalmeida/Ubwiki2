@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     zip \
     libzip-dev \
+    curl \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-install zip
 
@@ -21,6 +22,12 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
+
+# Copy your application files to the container
+COPY . /var/www/html
+
+# Install Composer dependencies
+RUN composer install --no-dev --optimize-autoloader
 
 # Set Apache DocumentRoot to Laravel public directory
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
