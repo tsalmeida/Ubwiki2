@@ -4,7 +4,11 @@ FROM php:8.1-apache
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     git \
-    unzip
+    unzip \
+    zip \
+    libzip-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && docker-php-ext-install zip
 
 # Install Composer globally
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
@@ -18,14 +22,14 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
-# Expose port 80
-EXPOSE 80
-
-# Start Apache
-CMD ["apache2-foreground"]
-
 # Set Apache DocumentRoot to Laravel public directory
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 
 # Update the default apache site with the config we created.
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/000-default.conf
+
+# Expose port 80
+EXPOSE 80
+
+# Start Apache
+CMD ["apache2-foreground"]
