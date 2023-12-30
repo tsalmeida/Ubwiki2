@@ -15,21 +15,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('ubwiki.welcome');
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
-    return view('ubwiki.dashboard');
+    return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-Route::get('/delfos', function () {
-    return view('delfos.delfos');
 });
 
 require __DIR__.'/auth.php';

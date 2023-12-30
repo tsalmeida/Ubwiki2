@@ -1,11 +1,46 @@
-To get a new environment working:
+# Setting Up a New Environment with Docker Compose
 
-Install Docker
-Clone with Github
-Set-up Docker with the following commands:
+1. **Install Docker**:
+   - Ensure Docker Desktop (Windows/Mac) or Docker Engine (Linux) is installed on your system.
 
-docker build -t ubwiki2 .
-docker run -d -p 8000:80 ubwiki2
+2. **Clone the Project with GitHub**:
+   - Clone the Repository
+
+3. **Navigate to the Project Directory**:
+   - Change into the project directory: `cd path/to/ubwiki2`
+
+4. **Set Up Environment with Docker Compose**:
+   - Run `docker-compose up -d` to start all services defined in your `docker-compose.yml`.
+   - This command builds and starts all the necessary containers for your application and database.
+
+5. **Access Your Application**:
+   - The Laravel application should be accessible at `http://localhost:8000`.
+
+6. **Interact with the Database** (Optional):
+   - Connect to your database on `localhost:3306` using the database credentials defined in the `docker-compose.yml`.
+
+7. **Additional Commands**:
+   - To stop the Docker Compose services, run `docker-compose down`.
+   - To view logs, use `docker-compose logs` or `docker logs [container_name]`.
+   - For a fresh build, you can use `docker-compose up -d --build`.
+
+## Notes:
+- Ensure your `docker-compose.yml` file is correctly set up in the root of the project.
+- If you make changes to the Dockerfile or docker-compose.yml, rerun the `docker-compose up -d` command.
+- The `.env` file for Laravel may need to be adjusted to match your Docker Compose service configurations.
 
 
 
+THEN THE FOLLOWING COMMANDS
+
+php artisan:generate
+php artisan migrate
+php artisan optimize
+
+
+
+To create a new Blade component in Laravel using the terminal, you use the Artisan command:
+
+php artisan make:component YourComponentName
+
+Replace YourComponentName with the desired name for your component. This command will create a new class file in the app/View/Components directory and a corresponding Blade view in the resources/views/components directory.

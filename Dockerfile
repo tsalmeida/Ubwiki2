@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     curl \
     && rm -rf /var/lib/apt/lists/* \
-    && docker-php-ext-install zip
+    && docker-php-ext-install zip \
+    && docker-php-ext-install pdo_mysql
 
 # Install Composer globally
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
